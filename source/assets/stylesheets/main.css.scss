@@ -4,3 +4,57 @@
 @import "reset/normalize";
 
 @import "base/base";
+
+$large-screen: 700px;
+
+header {
+  padding: $base-spacing;
+  width: 100%;
+  border-bottom: $base-border;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-bewteen;
+  margin-bottom: $base-spacing;
+
+  figure {
+    margin-right: auto;
+  }
+}
+
+section.hero {
+  width: 100%;
+  margin: $base-spacing 0;
+
+  section.hero__text {
+    display: block;
+    margin: 0 auto;
+    max-width: $large-screen;
+    margin: 10vh $base-spacing;
+  }
+
+  form {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 700px;
+    margin: 10vh $base-spacing;
+
+    input {
+      margin-bottom: 0;
+      border: 3px solid $action-color;
+    }
+  }
+
+  @media screen and (min-width: $large-screen) {
+    section.hero__text {
+      margin: 10vh auto;
+    }
+
+    form {
+      margin: 10vh auto;
+    }
+  }
+}

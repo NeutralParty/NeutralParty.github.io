@@ -1,1 +1,79 @@
-<h1>Hello world</h1>
+<header>
+  <figure class="logo">
+    <%= image_tag 'logo.png', id: 'logo' %>
+  </figure>
+
+  <nav>
+    <ul>
+      <li><%= link_to 'Contact Us', '#' %></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <section class="hero__text">
+    <h1>
+      Buy your home.
+      Save money by uniting your home purchase and loan together.
+    </h1>
+    <p>
+      Get 75% of the buying side commission.
+      Use only the services you need.
+      We give you a perfectly fitted loan, tailored just for you,
+      while keeping everything transparent with technology.
+    </p>
+  </section>
+
+  <form>
+    <input name="email" placeholder="Email"></input>
+    <button type="submit">Get Started</button>
+  </form>
+</section>
+
+<hr />
+
+<section class="features">
+  <ul>
+    <li>
+      We give you a neutral agent who will help you through the buying process 
+      and plan your loan.
+    </li>
+    <li>
+      You control your commission and pay only for the services you need.
+    </li>
+    <li>
+      We use our people and technology to keep transactions transparent 
+      and smooth for all parties behind the scenes.
+    </li>
+  </ul>
+</section>
+
+<section class="steps">
+  <ol>
+    <li>Get Pre-approved </li>
+    <li>Find your dream house</li>
+    <li>Tell us what house you want to offer</li>
+    <li>Get in escrow</li>
+    <li>Close your house</li>
+  </ol>
+</section>
+
+<section class="call-to-action">
+  <form>
+    <input name="email" placeholder="Email"></input>
+    <button type="submit">Get Started</button>
+  </form>
+</section>
+
+<hr />
+
+<footer>
+  <nav>
+    <ul>
+      <li><%= link_to 'Terms and Conditions', '#' %></li>
+      <li><%= link_to 'Facebook', '#' %></li>
+      <li><%= link_to 'Instagram', '#' %></li>
+      <li><%= link_to 'Contact Us', '#' %></li>
+    </ul>
+  </nav>
+</footer>
