@@ -5,6 +5,20 @@ html {
   line-height: $base-line-height;
 }
 
+h1 {
+  font-size: 3.375em;
+}
+
+h2 {
+  font-size: 2.25em;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: lighten($base-font-color, 15);
+}
+
+
 h1,
 h2,
 h3,
@@ -12,13 +26,13 @@ h4,
 h5,
 h6 {
   font-family: $heading-font-family;
-  font-size: modular-scale(1);
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
 
 p {
   margin: 0 0 $small-spacing;
+  line-height: 1.5;
 }
 
 a {

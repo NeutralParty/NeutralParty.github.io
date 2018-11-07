@@ -3,8 +3,8 @@ $base-font-family: $font-stack-system;
 $heading-font-family: $base-font-family;
 
 // Line height
-$base-line-height: 1.5;
-$heading-line-height: 1.2;
+$base-line-height: 1.2;
+$heading-line-height: 1.5;
 
 // Other Sizes
 $base-border-radius: 3px;
@@ -17,6 +17,7 @@ $blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+$primary-color: $blue;
 
 // Font Colors
 $base-font-color: $dark-gray;
