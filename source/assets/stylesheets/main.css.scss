@@ -7,6 +7,12 @@
 
 $large-screen: 700px;
 
+figure.logo {
+  img {
+    max-width: 200px;
+  }
+}
+
 header {
   padding: $base-spacing;
   width: 100%;
