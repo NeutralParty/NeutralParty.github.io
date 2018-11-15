@@ -258,3 +258,24 @@ section.benefits {
     grid-template-rows: 50% 50%;
   }
 }
+
+section.savings-slider {
+  text-align: center;
+  background-color: $light-gray;
+  color: $base-font-color;
+  padding: 10vh 10vw;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  div.slider-container {
+    width: 100%;
+    margin-bottom: $base-spacing;
+
+    input[type=range] {
+      width: 100%;
+    }
+  }
+}
