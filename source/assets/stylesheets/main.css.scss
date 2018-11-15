@@ -10,12 +10,12 @@ $large-screen: 700px;
 header {
   padding: $base-spacing;
   width: 100%;
+  height: 10vh;
   border-bottom: $base-border;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-bewteen;
-  margin-bottom: $base-spacing;
 
   figure {
     margin-right: auto;
@@ -46,62 +46,148 @@ form.form {
 
 section.hero {
   width: 100%;
-  margin: $base-spacing 0;
+
+  span.alt-text {
+  }
 
   section.hero__text {
-    display: block;
-    margin: 0 auto;
-    max-width: $large-screen;
+    background-color: white;
+    height: 100%;
+    grid-area: hero;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: $base-spacing;
+
+    p {
+      max-width: $large-screen / 1.5;
+    }
+  }
+
+  section.get-in-touch {
+    height: 33vh;
+    padding: $base-spacing;
+    grid-area: contact;
+    background-color: $dark-gray;
+    color: white;
+
+    p, a {
+      color: white;
+    }
+  }
+
+  section.learn-more {
+    height: 33vh;
+    padding: $base-spacing;
+    background-color: $blue;
+    grid-area: learn;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    p, a {
+      color: white;
+    }
+
+    a {
+      font-size: 2em;
+      font-weight: 600;
+    }
   }
 
   @media screen and (min-width: $large-screen) {
-    section.hero__text {
-      margin: 10vh auto;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 66.6% 33.3%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "hero learn"
+      "hero contact";
+
+    section.get-in-touch, section.learn-more {
+      height: auto;
     }
   }
 }
+
+section.get-in-touch {
+  background-color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 33vh;
+
+  p, a {
+    color: $base-font-color;
+  }
+
+  a {
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+  @media screen and (min-width: $large-screen) {
+    height: auto;
+  }
+}
+
 
 section.features {
   width: 100%;
 
+  p {
+    font-weight: 900;
+  }
+
   ul {
-    max-width: $large-screen;
-    margin: 0 auto;
-    display: block;
+    margin: 0;
 
     li {
-      margin: ($base-spacing * 3) 0;
-    }
-  }
-}
-
-section.steps {
-  width: 100%;
-
-  ol {
-    max-width: $large-screen;
-    margin: 0 auto;
-    display: block;
-
-    li {
-      margin: ($base-spacing * 3) 0;
       display: flex;
-      width: $large-screen / 2;
-      flex-flow: row nowrap;
+      flex-flow: column nowrap;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: center;
+      margin: 0;
+      padding: $base-spacing 10vw;
+      height: 33vh;
+    }
+
+    li#first {
+      background-color: $blue;
+      color: white;
+    }
+
+    li#second {
+      background-color: $dark-gray;
+      color: white;
+    }
+
+    li#third {
+      background-color: $blue;
+      color: white;
+    }
+  }
+
+  @media screen and (min-width: $large-screen) {
+    ul {
+      display: grid;
+      grid-template-columns: 33.6% 33.0% 33.6%;
+      grid-template-rows: 100%;
+      height: 33vh;
     }
   }
 }
+
 
 p.step__number {
   color: $primary-color;
   margin-right: $base-spacing;
 }
 
-span.alt-text {
-  color: $primary-color;
-}
 
 section.call-to-action {
   width: 100%;
@@ -111,11 +197,10 @@ footer {
   width: 100%;
   padding: $base-spacing;
   background-color: $primary-color;
-  margin-top: 10vh;
 
   nav {
     padding: $base-spacing 0;
-    width: $large-screen;
+    max-width: $large-screen;
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -127,5 +212,43 @@ footer {
     a {
       color: white;
     }
+  }
+}
+
+section.benefits {
+  background-color: $dark-gray;
+  color: white;
+  width: 100%;
+
+ section.benefits-header {
+   padding: $base-spacing;
+ }
+
+ article {
+   color: $base-font-color;
+   position: relative;
+   padding: $base-spacing;
+   background-color: lighten($blue, 40);
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
+   justify-content: center;
+
+   section.copy {
+     max-width: $large-screen / 2;
+   }
+
+   small {
+     position: absolute;
+     top: $base-spacing;
+     left: $base-spacing;
+   }
+ }
+
+  @media screen and (min-width: $large-screen) {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 33.4% 33.3% 33.3%;
+    grid-template-rows: 50% 50%;
   }
 }
