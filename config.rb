@@ -1,6 +1,7 @@
 activate :aria_current
 activate :autoprefixer
 activate :inline_svg
+activate :sprockets
 
 set :css_dir, "assets/stylesheets"
 set :fonts_dir, "assets/fonts"

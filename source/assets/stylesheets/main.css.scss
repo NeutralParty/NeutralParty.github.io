@@ -4,6 +4,7 @@
 @import "reset/normalize";
 
 @import "base/base";
+@import "rangeslider";
 
 $large-screen: 700px;
 
@@ -62,13 +63,16 @@ section.hero {
     grid-area: hero;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    margin: 0;
+    margin: 0 auto;
     padding: $base-spacing;
+    max-width: calc($large-screen - $base-spacing);
+
 
     p {
-      max-width: $large-screen / 1.5;
+      line-height: 2;
+      font-size: 1.25em;
     }
   }
 
@@ -144,9 +148,11 @@ section.get-in-touch {
 
 section.features {
   width: 100%;
+  height: 75vh;
 
   p {
-    font-weight: 900;
+    font-weight: 200;
+    font-size: 1.25em;
   }
 
   ul {
@@ -159,7 +165,7 @@ section.features {
       justify-content: center;
       margin: 0;
       padding: $base-spacing 10vw;
-      height: 33vh;
+      height: 75vh;
     }
 
     li#first {
@@ -227,14 +233,25 @@ section.benefits {
   width: 100%;
 
  section.benefits-header {
-   padding: $base-spacing;
+   padding: $base-spacing * 2;
+   grid-area: header;
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: flex-start;
+   justify-content: space-around;
+
+
+   p {
+     font-weight: 200;
+     line-height: 1.8;
+   }
  }
 
- article {
+ article.benefit {
    color: $base-font-color;
    position: relative;
    padding: $base-spacing;
-   background-color: lighten($blue, 40);
+   background-color: $light-gray;
    display: flex;
    flex-flow: column nowrap;
    align-items: center;
@@ -246,17 +263,43 @@ section.benefits {
 
    small {
      position: absolute;
-     top: $base-spacing;
-     left: $base-spacing;
+     top: 0;
+     left: 0;
+     display: block;
+     background-color: white;
+     padding: $base-spacing;
    }
  }
 
+ article#benefit-1 {
+   grid-area: item-1;
+ }
+
+ article#benefit-2 {
+   grid-area: item-2;
+ }
+ article#benefit-3 {
+   grid-area: item-3;
+ }
+
+ article#benefit-4 {
+   grid-area: item-4;
+ }
+
+
   @media screen and (min-width: $large-screen) {
-    height: 90vh;
+    height: 100vh;
     display: grid;
-    grid-template-columns: 33.4% 33.3% 33.3%;
+    grid-template-columns: 33.33% 33.33% 33.34%;
     grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "header item-1 item-2"
+      "header item-3 item-4"
   }
+}
+
+section.call-to-action {
+  height: 50vh;
 }
 
 section.savings-slider {
@@ -269,6 +312,7 @@ section.savings-slider {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+  min-height: 75vh;
 
   div.slider-container {
     width: 100%;

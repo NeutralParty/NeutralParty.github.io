@@ -13,3 +13,6 @@ gem "middleman-minify-html", "~> 3.4"
 gem "neat", "~> 3.0"
 gem "redcarpet", "~> 3.4"
 gem "sass", "~> 3.4"
+
+gem "jquery-middleman"
+gem 'middleman-sprockets', '4.0.0'
