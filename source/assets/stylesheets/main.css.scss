@@ -331,7 +331,7 @@ section.savings-slider {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  min-height: 75vh;
+  min-height: 100vh;
 
   div.slider-container {
     width: 100%;
@@ -340,5 +340,9 @@ section.savings-slider {
     input[type=range] {
       width: 100%;
     }
+  }
+
+  @media screen and (min-width: $large-screen) {
+    min-height: 75vh;
   }
 }
