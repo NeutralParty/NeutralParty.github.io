@@ -74,6 +74,7 @@ section.hero {
     margin: 0 auto;
     padding: $base-spacing;
     max-width: calc($large-screen - $base-spacing);
+    min-height: 40vh;
 
 
     p {
@@ -83,7 +84,7 @@ section.hero {
   }
 
   section.get-in-touch {
-    height: 33vh;
+    height: 25vh;
     padding: $base-spacing;
     grid-area: contact;
     background-color: $dark-gray;
@@ -100,7 +101,7 @@ section.hero {
   }
 
   section.learn-more {
-    height: 33vh;
+    height: 25vh;
     padding: $base-spacing;
     background-color: $blue;
     grid-area: learn;
@@ -159,7 +160,7 @@ section.get-in-touch {
 
 section.features {
   width: 100%;
-  height: 75vh;
+  height: 100vh;
 
   p {
     font-weight: 200;
@@ -176,7 +177,7 @@ section.features {
       justify-content: center;
       margin: 0;
       padding: $base-spacing 10vw;
-      height: 75vh;
+      min-height: 33.34vh;
     }
 
     li#first {
@@ -196,11 +197,17 @@ section.features {
   }
 
   @media screen and (min-width: $large-screen) {
+    height: 75vh;
+
     ul {
       display: grid;
       grid-template-columns: 33.33% 33.33% 33.34%;
       grid-template-rows: 100%;
-      height: 33vh;
+      height: 75vh;
+
+      li {
+        height: 75vh;
+      }
     }
   }
 }
@@ -250,7 +257,7 @@ section.benefits {
    flex-flow: column nowrap;
    align-items: flex-start;
    justify-content: space-around;
-
+   min-height: 90vh;
 
    p {
      font-weight: 200;
@@ -270,6 +277,7 @@ section.benefits {
 
    section.copy {
      max-width: $large-screen / 2;
+     margin-left: $base-spacing * 2;
    }
 
    small {
