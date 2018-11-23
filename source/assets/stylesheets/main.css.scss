@@ -5,8 +5,14 @@
 
 @import "base/base";
 @import "rangeslider";
+@import "typography";
 
 $large-screen: 700px;
+
+.savings-total {
+  color: $primary-color;
+  font-size: 2.5em;
+}
 
 figure.logo {
   img {
@@ -86,6 +92,11 @@ section.hero {
     p, a {
       color: white;
     }
+
+    a {
+      font-size: 2em;
+      font-weight: 500;
+    }
   }
 
   section.learn-more {
@@ -104,7 +115,7 @@ section.hero {
 
     a {
       font-size: 2em;
-      font-weight: 600;
+      font-weight: 500;
     }
   }
 

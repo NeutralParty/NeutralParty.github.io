@@ -2,16 +2,6 @@ $font-path: '../fonts/' !default;
 
 @font-face {
    font-family: 'TTCommons';
-      src: url('#{$font-path}TT-Commons-Bold.otf');
-      src: url('#{$font-path}TT-Commons-Bold.ttf') format('truetype'),
-           url('#{$font-path}TT-Commons-Bold.otf') format('otf');
-   font-weight: 700;
-   font-style: normal;
-}
-
-
-@font-face {
-   font-family: 'TTCommons';
       src: url('#{$font-path}TT-Commons-Medium.otf');
       src: url('#{$font-path}TT-Commons-Medium.ttf') format('truetype'),
            url('#{$font-path}TT-Commons-Medium.otf') format('otf');
@@ -38,12 +28,10 @@ html {
 
 h1 {
   font-size: 3.375em;
-  font-weight: 700;
 }
 
 h2 {
   font-size: 2.25em;
-  font-weight: 500;
 }
 
 h3 {
