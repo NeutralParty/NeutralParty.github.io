@@ -245,9 +245,26 @@ footer {
   }
 }
 
-section.benefits {
-  background-color: $dark-gray;
+section.neutrality {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding: $base-spacing;
+  background-color: $blue;
   color: white;
+  height: 90vh;
+
+  p {
+    margin: $base-spacing 0;
+    font-size: 1.25em;
+    line-height: 2;
+  }
+}
+
+section.benefits {
+  background-color: $light-gray;
+  color: $base-font-color;
   width: 100%;
 
  section.benefits-header {
@@ -255,9 +272,10 @@ section.benefits {
    grid-area: header;
    display: flex;
    flex-flow: column nowrap;
-   align-items: flex-start;
-   justify-content: space-around;
-   min-height: 90vh;
+   align-items: center;
+   justify-content: center;
+   min-height: 30vh;
+   text-align: center;
 
    p {
      font-weight: 200;
@@ -309,11 +327,12 @@ section.benefits {
   @media screen and (min-width: $large-screen) {
     height: 100vh;
     display: grid;
-    grid-template-columns: 33.33% 33.33% 33.34%;
-    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 35% 35%;
     grid-template-areas:
-      "header item-1 item-2"
-      "header item-3 item-4"
+      "header header"
+      "item-1 item-2"
+      "item-3 item-4"
   }
 }
 
