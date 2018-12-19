@@ -250,10 +250,10 @@ section.neutrality {
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: center;
-  padding: $base-spacing;
+  padding: 10vh $base-spacing;
   background-color: $blue;
   color: white;
-  height: 90vh;
+  height: auto;
 
   section {
     max-width: $large-screen;
@@ -265,6 +265,10 @@ section.neutrality {
     margin: $base-spacing 0;
     font-size: 1.25em;
     line-height: 2;
+  }
+
+  @media screen and (min-width: $large-screen) {
+    height: 90vh;
   }
 }
 
