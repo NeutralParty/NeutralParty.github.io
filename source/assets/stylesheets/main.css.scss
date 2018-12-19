@@ -255,6 +255,12 @@ section.neutrality {
   color: white;
   height: 90vh;
 
+  section {
+    max-width: $large-screen;
+    margin: 0 auto;
+    display: block;
+  }
+
   p {
     margin: $base-spacing 0;
     font-size: 1.25em;
