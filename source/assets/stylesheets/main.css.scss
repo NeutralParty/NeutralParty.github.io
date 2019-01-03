@@ -251,8 +251,8 @@ section.neutrality {
   align-items: flex-start;
   justify-content: center;
   padding: 10vh $base-spacing;
-  background-color: $blue;
-  color: white;
+  background-color: white;
+  color: $base-font-color;
   height: auto;
 
   section {
