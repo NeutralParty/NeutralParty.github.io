@@ -85,6 +85,12 @@ section.hero {
     max-width: calc($large-screen - $base-spacing);
     min-height: 40vh;
 
+    h1 {
+      color: $dark-gray;
+      max-width: $large-screen;
+      display: block;
+      margin: 0 auto;
+    }
 
     p {
       line-height: 2;
