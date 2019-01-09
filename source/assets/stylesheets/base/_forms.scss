@@ -10,11 +10,11 @@ form#mc-embedded-subscribe-form {
 
   h1 {
     color: $action-color;
-    margin-bottom: $small-spacing;
+    margin-bottom: 0;
   }
 
   section.contact-info {
-    margin-bottom: $base-spacing;
+    margin-bottom: $base-spacing * 2;
   }
 
   input.button {
