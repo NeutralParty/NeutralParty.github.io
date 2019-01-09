@@ -7,7 +7,16 @@
 @import "rangeslider";
 @import "typography";
 
-$large-screen: 700px;
+ul.horizontal {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+
+  li {
+    margin-left: $small-spacing;
+  }
+}
 
 .savings-total {
   color: $primary-color;
@@ -72,7 +81,7 @@ section.hero {
     align-items: flex-start;
     justify-content: center;
     margin: 0 auto;
-    padding: $base-spacing;
+    padding: $base-spacing * 3;
     max-width: calc($large-screen - $base-spacing);
     min-height: 40vh;
 
