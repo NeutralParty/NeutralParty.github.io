@@ -25,7 +25,7 @@ ul.horizontal {
 
 figure.logo {
   img {
-    max-width: 200px;
+    max-width: 150px;
   }
 }
 
@@ -73,6 +73,11 @@ section.hero {
   }
 
   section.hero__text {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    image-url("backsplash.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: white;
     height: 100%;
     grid-area: hero;
@@ -80,13 +85,11 @@ section.hero {
     flex-flow: column nowrap;
     align-items: flex-start;
     justify-content: center;
-    margin: 0 auto;
-    padding: $base-spacing * 3;
-    max-width: calc($large-screen - $base-spacing);
-    min-height: 40vh;
+    padding: ($base-spacing * 2) $base-spacing;
+    min-height: 70vh;
 
     h1 {
-      color: $dark-gray;
+      color: white;
       max-width: $large-screen;
       display: block;
       margin: 0 auto;
@@ -94,7 +97,10 @@ section.hero {
 
     p {
       line-height: 2;
-      font-size: 1.25em;
+    }
+
+    a {
+      color: orange;
     }
   }
 
@@ -110,7 +116,7 @@ section.hero {
     }
 
     a {
-      font-size: 2em;
+      font-size: 1.44em;
       font-weight: 500;
     }
   }
@@ -130,7 +136,7 @@ section.hero {
     }
 
     a {
-      font-size: 2em;
+      font-size: 1.44em;
       font-weight: 500;
     }
   }
@@ -283,7 +289,15 @@ section.neutrality {
   }
 
   @media screen and (min-width: $large-screen) {
+    background: image-url("backsplash-2.png");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 33% auto;
     height: 90vh;
+
+    section {
+      margin-left: calc(40% + #{$base-spacing});
+    }
   }
 }
 
@@ -291,15 +305,14 @@ section.benefits {
   background-color: $light-gray;
   color: $base-font-color;
   width: 100%;
+  padding: ($base-spacing * 2) 0;
 
  section.benefits-header {
-   padding: $base-spacing * 2;
-   grid-area: header;
    display: flex;
+   padding: ($base-spacing * 2) $small-spacing;
    flex-flow: column nowrap;
    align-items: center;
    justify-content: center;
-   min-height: 30vh;
    text-align: center;
 
    p {
@@ -321,15 +334,29 @@ section.benefits {
    section.copy {
      max-width: $large-screen / 2;
      margin-left: $base-spacing * 2;
+     position: relative;
    }
 
    small {
      position: absolute;
-     top: 0;
-     left: 0;
-     display: block;
-     background-color: white;
-     padding: $base-spacing;
+     left: -$base-spacing * 3;
+     top: $small-spacing;
+     background-color: $blue;
+     padding: ($small-spacing / 2) ($small-spacing * 1.25);
+     padding-top: $small-spacing;
+     border-radius: 100%;
+     color: white;
+     margin-bottom: 0;
+
+     &:after {
+       content: '';
+       display: block;
+       position: absolute;
+       height: 100px;
+       width: 1px;
+       border: 1px dashed black;
+       top: $base-spacing * 2;
+     }
    }
  }
 
@@ -350,14 +377,6 @@ section.benefits {
 
 
   @media screen and (min-width: $large-screen) {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 35% 35%;
-    grid-template-areas:
-      "header header"
-      "item-1 item-2"
-      "item-3 item-4"
   }
 }
 
